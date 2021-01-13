@@ -12,9 +12,9 @@ export class TableComponent implements OnInit {
 
   sheetName = 'Linhas de Negócio';
   fileName = "Table_to_Excel.xlsx"
-  
+
   exportexcel():void{
-    let element = document.getElementById("Table_to_Excel");
+    let element = document.getElementById("TABLE_to_Excel");
     const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
 
     const wb: XLSX.WorkBook = XLSX.utils.book_new();

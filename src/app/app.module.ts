@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ExcelService } from './services/Excel.service';
 import { DivComponent } from './components/div/div.component';
 import { HomeComponent } from './components/home/home.component';
+import { JsonComponent } from './components/json/json.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HomeComponent } from './components/home/home.component';
     TableComponent,
     MattabComponent,
     DivComponent,
-    HomeComponent
+    HomeComponent,
+    JsonComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DivComponent } from './components/div/div.component';
 import { HomeComponent } from './components/home/home.component';
+import { JsonComponent } from './components/json/json.component';
 import { MattabComponent } from './components/mattab/mattab.component';
 import { TableComponent } from './components/table/table.component';
 
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'mattab', component: MattabComponent},
   {path: 'div', component: DivComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'json', component: JsonComponent},
 ];
 
 @NgModule({
