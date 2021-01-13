@@ -1,0 +1,51 @@
+<div class="container" style="width: 70%; height: 20% important;">
+
+  <div>
+  <br>
+    <button class="btn btn-outline-primary"
+            (click)="exporter.exportTable('xlsx', {fileName:'ExportExcel'})">
+            Exportar para Excel
+    </button>
+    <br>
+  </div>
+
+  <div class="mat-elevation-z0">
+    <table mat-table matTableExporter #exporter="matTableExporter" class="full-width-table center" matSort aria-label="Elements">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header columnWidths="150">Id</th>
+        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header columnWidths="500">Nome</th>
+        <td mat-cell *matCellDef="let row">{{row.nome}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="idade">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header columnWidths="130">Idade</th>
+        <td mat-cell *matCellDef="let row">{{row.idade}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="telefone">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header columnWidths="400">Telefone</th>
+        <td mat-cell *matCellDef="let row">{{row.telefone}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="UF">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header columnWidths="80">UF</th>
+        <td mat-cell *matCellDef="let row">{{row.UF}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator #paginator
+        [length]="dataSource?.data.length"
+        [pageIndex]="0"
+        [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 50]">
+    </mat-paginator>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+#rootTable .row {display: table;}
+#rootTable .row > [class^="col-"] {display: table-cell;}
