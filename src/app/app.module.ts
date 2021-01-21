@@ -15,7 +15,9 @@ import { ExcelService } from './services/Excel.service';
 import { DivComponent } from './components/div/div.component';
 import { HomeComponent } from './components/home/home.component';
 import { JsonComponent } from './components/json/json.component';
+import { AlasqlComponent } from './components/alasql/alasql.component';
 
+import * as alasql from 'alasql';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { JsonComponent } from './components/json/json.component';
     MattabComponent,
     DivComponent,
     HomeComponent,
-    JsonComponent
+    JsonComponent,
+    AlasqlComponent
   ],
   imports: [
     BrowserModule,
